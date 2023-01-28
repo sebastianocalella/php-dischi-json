@@ -19,16 +19,30 @@
 
     <body>
         <div id="app">
-            <div class="container">
-                <div id="discs-container" class="row justify-content-between mt-5">
-                    <div v-for="disc in discList" class="card col-3 mx-1 mb-5">
-                        <img class="card-img-top my-3" :src="disc.poster" :alt="disc.title">
-                        <h5 class="card-title">{{disc.title}}</h5>
-                        <p class="card-text">{{disc.author}}</p>
-                        <h6>{{disc.year}}</h6>
+            <header>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col h-75">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
+            </header>
+
+            <main>
+                <div class="container">
+                    <div id="discs-container" class="row justify-content-between mt-5">
+                        <div v-for="disc in discList" class="card col-3 mx-1 mb-5">
+                            <img class="card-img-top my-3" :src="disc.poster" :alt="disc.title">
+                            <h5 class="card-title">{{disc.title}}</h5>
+                            <p class="card-text">{{disc.author}}</p>
+                            <h6>{{disc.year}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
         </div>
 
         <!-- Ajax axios library -->
