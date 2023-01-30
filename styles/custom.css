@@ -26,3 +26,21 @@ header img{
     background-color: #112030;
     text-align: center;
 }
+
+#discs-container .card:hover{
+    cursor: pointer;
+}
+
+#disc-info{
+    height: 94vh;
+    width: 94vw;
+    background-color: #1e3145ee;
+    border-radius: 15px;
+    z-index: 1;
+    top: 3vh;
+    left: 3vw;
+}
+
+#disc-info button{
+    margin-left: calc(100% - 40px);
+}
