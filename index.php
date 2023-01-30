@@ -32,15 +32,24 @@
             <main>
                 <div class="container position-relative">
                     <div id="discs-container" class="row justify-content-between mt-5">
-                        <div v-for="(disc, index) in discList" class="card col-12 col-md-5 col-lg-3 mx-1 mb-5 px-4 py-3">
+                        <div v-for="(disc, index) in discList" 
+                            class="card col-12 col-md-5 col-lg-3 mx-1 mb-5 px-4 py-3"
+                            @click="discInfo(index)">
                             <img class="card-img-top my-3" :src="disc.poster" :alt="disc.title">
                             <h5 class="card-title">{{disc.title}}</h5>
                             <p class="card-text">{{disc.author}}</p>
                         </div>
                     </div>
 
-                    <div id="disc-info" class="position-fixed p-3" :class="!(displayInfo) ? '' : 'd-none'">
+                    <div id="disc-info" class="position-fixed p-3" :class="displayInfo ? '' : 'd-none'">
                         <button  type="button" class="btn btn-outline-light" @click="closeInfo">&cross;</button>
+                        <div class="my-selected-disc">
+                            <img :src="discList[discIndex].poster" :alt="discList[discIndex].title + 'image'">
+                            <h5>{{discList[discIndex].title}}</h5>
+                            <p>{{discList[discIndex].author}}</p>
+                            <p>{{discList[discIndex].year}}</p>
+                            <p>{{discList[discIndex].genre}}</p>
+                        </div>
                     </div>
                 </div>
             </main>

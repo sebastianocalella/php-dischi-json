@@ -6,27 +6,25 @@ createApp({
         return {
             apiAdress: './server.php',
             discList: [],
-            displayInfo: true,
+            displayInfo: false,
+            discIndex: 0,
         }
     },
     methods: {
         getDiscList() {
             axios.get(this.apiAdress).then((response) => {
-                console.log(response.data);
                 this.discList = response.data;
             })
         },
-        closeInfo(){
-            console.log(this.displayInfo);
-            this.displayInfo = false;
-            console.log(this.displayInfo);
+        discInfo(indexValue){
+            this.discIndex = indexValue;
+            this.displayInfo = true;
         },
-        myLog(item){
-            console.log(item);
+        closeInfo(){
+            this.displayInfo = false;
         }
     },
     created() {
         this.getDiscList();
-        this.myLog(this.displayInfo);
     },
 }).mount('#app');

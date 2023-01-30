@@ -9,6 +9,7 @@
 
 body{
     background-color: #1d2d3c;
+    color: white;
 }
 
 header{
@@ -22,7 +23,6 @@ header img{
 
 #discs-container .card{
     border: none;
-    color: white;
     background-color: #112030;
     text-align: center;
 }
@@ -43,4 +43,15 @@ header img{
 
 #disc-info button{
     margin-left: calc(100% - 40px);
+}
+
+.my-selected-disc{
+    width: 25%;
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+.my-selected-disc img{
+    width: 100%;
+    margin-bottom: 30px;
 }
